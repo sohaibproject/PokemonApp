@@ -4,7 +4,7 @@ import App from './App';
 // import './index.css';
 import './styles/main.css'; // Import the CSS entry file
 
-ReactDOM.createRoot(document.getElementById('pokemon')).render(
+ReactDOM.createRoot(document.getElementById('pokemon') as HTMLElement).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
