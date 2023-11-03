@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-// import './index.css';
-import './styles/main.css'; // Import the CSS entry file
+import './index.css';
+import './styles';
 
 ReactDOM.createRoot(document.getElementById('pokemon') as HTMLElement).render(
   <React.StrictMode>

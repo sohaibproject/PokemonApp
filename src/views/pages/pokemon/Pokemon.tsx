@@ -9,7 +9,7 @@ const PokemonPage = () => {
     usePokemon();
   return (
     <div className='flex flex-col items-center '>
-      <Container hasError={hasError} loading={false}>
+      <Container hasError={hasError} loading={loading}>
         <header className='shadow-md p-4 mt-3 rounded-lg '>
           <div className='flex justify-between items-center  space-x-3 '>
             <Search searchFor='search' placeholder='Search...' value={searchName} onChange={handleSearch} />

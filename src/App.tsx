@@ -1,16 +1,19 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import PokemonPage from './views/pages/pokemon/Pokemon';
-import NotFoundPage from './views/pages/not-found/NotFound';
-import './styles';
+import { Suspense, lazy } from 'react';
+import Loading from './views/components/loading/Loading';
+const PokemonPage = lazy(() => import('./views/pages/pokemon/Pokemon'));
+const NotFoundPage = lazy(() => import('./views/pages/not-found/NotFound'));
 function App() {
   return (
     <div className='App'>
       <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<PokemonPage />} />
+        <Suspense fallback={<Loading />}>
+          <Routes>
+            <Route path='/' element={<PokemonPage />} />
 
-          <Route path='*' element={<NotFoundPage />} />
-        </Routes>
+            <Route path='*' element={<NotFoundPage />} />
+          </Routes>
+        </Suspense>
       </BrowserRouter>
     </div>
   );

@@ -27,7 +27,7 @@ const Pagination = ({ currentPage, paginate, parPage, handelItemPerpage, total }
     <div className='flex justify-end items-center'>
       <div className='mx-3'>
         <span className='mx-3'>Rows Per Page</span>
-        <select value={parPage} className='border-transparent outline-none' onChange={(e) => handelItemPerpage(parseInt(e.target.value))}>
+        <select value={parPage} className='border-transparent outline-none cursor-pointer' onChange={(e) => handelItemPerpage(parseInt(e.target.value))}>
           <option value={5}>5</option>
           <option value={10}> 10</option>
           <option value={15}> 15</option>
